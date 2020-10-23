@@ -1,0 +1,38 @@
+.bodyMenu {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.bodyMenu__menuItem.second {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.bodyMenu__menuItem.third {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.bodyMenu__menuItem.fifth {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.bodyMenu__menuItem {
+  height: 80px;
+}
+
+.bodyMenu__menuItem > h1 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
