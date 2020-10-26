@@ -16,8 +16,6 @@ const BodyMenu = () => {
     fetchData();
   }, []);
 
-  console.log(categories);
-
   return (
     <>
       <h1 className="menuTitle">What's on the menu?</h1>
@@ -26,8 +24,13 @@ const BodyMenu = () => {
           console.log(el);
           return (
             <div className="bodyMenu__menuItem" key={el.id}>
-              <img src={el.imgUrl} alt={el.name} />
-              <h2>{el.name}</h2>
+              <div className="bodyMenu__menuItem-top">
+                <img src={el.imgUrl} alt={el.name} />
+                <h2>{el.name}</h2>
+              </div>
+              <div className="bodyMenu__menuItem-bottom">
+                <p>{el.descriptionENG}</p>
+              </div>
             </div>
           );
         })}
